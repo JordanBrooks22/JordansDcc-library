@@ -24,6 +24,8 @@ class App extends Component {
                         {/*Button here to move to previous book viewed*/}
                         </div>
                         <div className="col">
+                            <h1>{this.books[this.state.bookNumber].title}</h1>
+                            <h4>{this.books[0].author}</h4>
                         {/*Display Book with Cover here*/}
                         </div>
                         <div className="col">
