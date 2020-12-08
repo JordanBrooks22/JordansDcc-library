@@ -37,9 +37,10 @@ class App extends Component {
                         <div className="col">
                             <h1>{this.books[this.state.bookNumber].title}</h1>
                             <h4>{this.books[this.state.bookNumber].author}</h4>
-                        {/*Display Book with Cover here*/}
                         </div>
                         <div className="col">
+                        <button onClick={() => this.goToNextBook()}>Next Book</button>
+                            
                         {/*Button here to move to previous book viewed*/}
                         </div>
                 </div>
