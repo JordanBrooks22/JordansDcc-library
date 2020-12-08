@@ -14,6 +14,17 @@ class App extends Component {
             bookNumber: 0
         }
     }
+
+    goToNextBook(){
+        let tempBookNumber = this.state.bookNumber;
+        tempBookNumber++;
+        if(tempBookNumber === this.books.length){
+            tempBookNumber = 0;
+        }
+        this.setState({
+            bookNumber: tempBookNumber
+        });
+    }
  
     render() {
         return (
@@ -25,7 +36,7 @@ class App extends Component {
                         </div>
                         <div className="col">
                             <h1>{this.books[this.state.bookNumber].title}</h1>
-                            <h4>{this.books[0].author}</h4>
+                            <h4>{this.books[this.state.bookNumber].author}</h4>
                         {/*Display Book with Cover here*/}
                         </div>
                         <div className="col">
