@@ -41,15 +41,17 @@ class App extends Component {
         return (
             <div className="container-fluid">
                 <TitleBar />
+                <BookViewer book={this.books[this.state.bookNumber]} nextBook={() => this.goToNextBook()} previousBook={() => this.goToPreviousBook()}/>
                 <div className='row rowspacer'>
-                    <div className='col'>
-                        {/*Button here to move to previous book viewed*/}
+                    <div className='col-md-4'>
+                        <button onClick={() => this.goToPreviousBook()}>Previous Book</button>
                     </div>
-                    <div className='col'>
-                        {/*Display Book with Cover here*/}
+                    <div className='col-md-4'>
+                        <h1>{this.books[this.state.bookNumber].title}</h1>
+                        <h4>{this.books[this.state.bookNumber].author}</h4>
                     </div>
-                    <div className='col'>
-                        {*/Button here to move to the previous book viewed*/}
+                    <div className='col-md-4'>
+                        <button onClick={() => this.goToNextBook()}>Next Book</button>
                     </div>
                 </div>
                
