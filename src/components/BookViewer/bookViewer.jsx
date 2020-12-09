@@ -3,18 +3,15 @@ import React from 'react';
 function BookViewer(props){
     return(
         <div className="row row-spacer">
-        <div className="col">
-            <button onClick={() => this.gotoPreviousBook()}>Previous Book</button>
-            {/*Button here to move to previous book viewed*/}
+        <div className="col-md-4">
+            <button onClick={() => props.previousBook()}>Previous Book</button>
             </div>
-            <div className="col">
-                <h1>{this.books[this.state.bookNumber].title}</h1>
-                <h4>{this.books[this.state.bookNumber].author}</h4>
+            <div className="col-md-4">
+                <h1>{this.book.title}</h1>
+                <h4>{this.book.author}</h4>
             </div>
-            <div className="col">
-            <button onClick={() => this.goToNextBook()}>Next Book</button>
-                
-            {/*Button here to move to previous book viewed*/}
+            <div className="col-md-4">
+            <button onClick={() => props.nextBook()}>Next Book</button>
             </div>
     </div>
     )

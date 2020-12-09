@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TitleBar from "./TitleBar/titleBar";
+import BookViewer from "./BookViewer/bookViewer";
 
 class App extends Component {
     constructor(props) {
@@ -40,21 +41,18 @@ class App extends Component {
         return (
             <div className="container-fluid">
                 <TitleBar />
-                <div className="row row-spacer">
-                    <div className="col">
-                        <button onClick={() => this.gotoPreviousBook()}>Previous Book</button>
+                <div className='row rowspacer'>
+                    <div className='col'>
                         {/*Button here to move to previous book viewed*/}
-                        </div>
-                        <div className="col">
-                            <h1>{this.books[this.state.bookNumber].title}</h1>
-                            <h4>{this.books[this.state.bookNumber].author}</h4>
-                        </div>
-                        <div className="col">
-                        <button onClick={() => this.goToNextBook()}>Next Book</button>
-                            
-                        {/*Button here to move to previous book viewed*/}
-                        </div>
+                    </div>
+                    <div className='col'>
+                        {/*Display Book with Cover here*/}
+                    </div>
+                    <div className='col'>
+                        {*/Button here to move to the previous book viewed*/}
+                    </div>
                 </div>
+               
             </div>
         );
     }
