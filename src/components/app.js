@@ -16,6 +16,13 @@ class App extends Component {
         }
     }
 
+    addNewBook(book){
+        this.books.push(book);
+        this.setState({
+            bookNumber: this.books.length - 1
+        });
+    }
+
     goToNextBook(){
         let tempBookNumber = this.state.bookNumber;
         tempBookNumber++;
